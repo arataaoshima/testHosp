@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  course_id: 1
+  material: MyString
+  type: 
+  link: MyText
+  final_exam: false
+
+two:
+  name: MyString
+  course_id: 1
+  material: MyString
+  type: 
+  link: MyText
+  final_exam: false

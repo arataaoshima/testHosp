@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>User Materials</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Material</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_materials.each do |user_material| %>
+      <tr>
+        <td><%= user_material.user %></td>
+        <td><%= user_material.material %></td>
+        <td><%= link_to 'Show', user_material %></td>
+        <td><%= link_to 'Edit', edit_user_material_path(user_material) %></td>
+        <td><%= link_to 'Destroy', user_material, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User Material', new_user_material_path %>
