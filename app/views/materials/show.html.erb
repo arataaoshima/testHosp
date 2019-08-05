@@ -11,19 +11,22 @@
 </p>
 
 <p>
-  <strong>Material:</strong>
-  <%= @material.material %>
+  <strong>Course:</strong>
+  <%= @material.quiz_type %>
 </p>
 
-<p>
-  <strong>Type:</strong>
-  <%= @material.type %>
-</p>
+<% if @material.quiz_type == "multiple" %>
+ <p>Please click the following link to do quizzes </p>
+  <strong><%= link_to "Start", quizzes_path %></strong>
+<% end %>
 
-<p>
-  <strong>Link:</strong>
-  <%= @material.link %>
-</p>
+
+<% if @material.quiz_type == "video" %>
+  <p>
+    <strong>Link:</strong>
+    <iframe width="560" height="315" src="<%= @material.link %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </p>
+<% end %>
 
 <p>
   <strong>Final exam:</strong>

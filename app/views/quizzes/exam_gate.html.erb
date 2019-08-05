@@ -1,0 +1,23 @@
+<h1>Exam!!</h1>
+
+<%= @quiz.title %></br>
+</br>
+<%= @quiz.content %> </br>
+Quiz ID: <%= @quiz.id %>
+
+
+<%= form_tag("/exam_check/#{@quiz.id}",method: :post) do %>
+
+<label class="radio-inline">
+  <input type="radio" name="answer" id="inlineRadio1" value="<%= @quiz.select1 %>"> <%= @quiz.select1 %>
+</label>
+<label class="radio-inline">
+  <input type="radio" name="answer" id="inlineRadio2" value="<%= @quiz.select2 %>"> <%= @quiz.select2 %>
+</label>
+<label class="radio-inline">
+  <input type="radio"  name="answer" id="inlineRadio3" value="<%= @quiz.select3 %>"> <%= @quiz.select3 %>
+  </label>
+ <p></p>
+<br><input type="submit">
+
+<% end %>

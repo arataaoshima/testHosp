@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @quiz.title %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @quiz.content %>
+</p>
+
+<p>
+  <strong>Answer:</strong>
+  <%= @quiz.answer %>
+</p>
+
+<p>
+  <strong>Answer Text:</strong>
+  <%= @quiz.answer_text %>
+</p>
+<p>
+  <strong>Selects:</strong>
+  <%= @quiz.select1 %> | <%= @quiz.select2 %> | <%= @quiz.select3 %>
+</p>
+
+<p>
+  <strong>Suborder:</strong>
+  <%= @quiz.suborder %>
+</p>
+
+<%= link_to 'Edit', edit_quiz_path(@quiz) %> |
+<%= link_to 'Back', quizzes_path %>
