@@ -1,60 +1,31 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Travelist</title>
+    <title>T College</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-
   <body>
-    <nav class="navbar navbar-expand-lg headbar navbar-light">
-    <a class="navbar-brand" href="/">Travel Gate College</a>
+    <nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="/">Travel Gate College</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+  <ul class="navbar-nav headbar-content">
+    <li class="nav-item">
+      <%= link_to "New Posts", quizzes_path, class:"nav-link nav-link" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to "All Posts", quizzes_path, class:"nav-link nav-link" %>
+    </li>
+  </ul>
+  </div>
+  </nav>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-        <ul class="navbar-nav mr-auto headbar-content">
-
-          <li class="nav-item headbar-item">
-            <%= link_to "Quizzes", quizzes_path %>
-          </li>
-
-          <li class="nav-item headbar-item">
-            <%= link_to "Users", users_path %>
-          </li>
-
-          <li class="nav-item headbar-item">
-            <%= link_to "Courses", courses_path %>
-          </li>
-
-          <li class="nav-item dropdown headbar-item">
-            <a class="dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Materials
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="/materials/new">New Material</a>
-              <a class="dropdown-item" href="/materials">Materials</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-
-        </ul>
-
-        <%= form_tag materials_path, :method => 'get' do %>
-        <!-- , class:"form-control mr-sm-2", -->
-          <%= text_field_tag :search, params[:search], placeholder: "Search" %>
-          <%= submit_tag "Search", :name => nil, :class => "btn btn-outline-success my-2 my-sm-0" %>
-        <% end %>
-    </div>
-
-</nav>
     <%= yield %>
   </body>
 </html>

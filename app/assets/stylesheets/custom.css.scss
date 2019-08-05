@@ -5,11 +5,40 @@
   background-color: rgba(255,0,0,0.1);
 }
 
+.headvar:hover{
+  text-decoration:none;
+  background: none;
+}
+
+
 .headbar-item {
   font-size: 15px;
   margin-right: 20px;
+  vertical-align: middle;
 }
 
 .headbar-content {
+  vertical-align: middle;
+}
+
+.nav-item {
+  vertical-align: middle;
+}
+
+.nav-link {
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.nav-link:hover {
+  background-color:white;
+}
+
+.navbar-brand:hover {
+  background-color:white;
+}
+
+.headbar-content{
+  margin-bottom: 25px;
   vertical-align: middle;
 }
