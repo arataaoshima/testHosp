@@ -17,7 +17,11 @@ class QuizzesController < ApplicationController
       if @quiz.answer_text == params[:answer]
         material_id = @quiz.material_id;
         next_quiz_id = @quiz.suborder + 1;
+        if next_quiz_id == 6
+         redirect_to ("/quizzes")
+      else
         redirect_to("/quizzes/exam_gate/#{material_id}/#{next_quiz_id}");
+      end
         #redirect_to("/quizzes")
       else
         #redirect_to("/quizzes/new")
