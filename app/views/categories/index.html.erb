@@ -1,7 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Categories</h1>
+<div class="card-group">
+ <div class="container">
+  <div class="row">
+    <% @categories.each do |category| %>
+     <div class="col-md-4 col-lg-4 one-row">
 
+        <div class="card h-100">
+          <a href="/categories/<%= category.id %>">
+            <div class="row-height">
+            <img src="<%= category.imgage_url %>">
+            </div>
+          </a>
+          <div class="card-body">
+            <h5 class="card-title"><%= link_to category.category_name, category_path(category) %></h5>
+          </div>
+        </div>
+      </div>
+
+      <% end %>
+   </div>
+  </div>
+</div>
+<!--
 <table>
   <thead>
     <tr>
@@ -21,7 +43,7 @@
     <% end %>
   </tbody>
 </table>
-
+-->
 <br>
 
 <%= link_to 'New Category', new_category_path %>

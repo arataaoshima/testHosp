@@ -1,3 +1,23 @@
 // Place all the styles related to the Categories controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container-wrapper {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+img {
+    height:225px;
+    object-fit: cover;
+}
+
+img:hover{
+    box-shadow:3px 3px 6px rgba(0,0,0,0.5);
+}
+
+
+.card-body {
+    position: relative;
+}
