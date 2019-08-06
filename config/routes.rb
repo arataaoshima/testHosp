@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :categories
   resources :quizzes
   get "/quizzes/exam_gate/:id/:suborder" => "quizzes#exam_gate"
   get "/quizzes/exam/:id" => "quizzes#exam"

@@ -9,23 +9,35 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light">
-  <a class="navbar-brand" href="/">Travel Gate College</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-  <ul class="navbar-nav headbar-content">
-    <li class="nav-item">
-      <%= link_to "New Posts", quizzes_path, class:"nav-link nav-link" %>
-    </li>
-    <li class="nav-item">
-      <%= link_to "All Posts", quizzes_path, class:"nav-link nav-link" %>
-    </li>
-  </ul>
-  </div>
-  </nav>
 
+        <nav class="navbar navbar-expand-lg navbar-light">
+      <a class="navbar-brand" href="/">Travel Gate College</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav headbar-content">
+        <li class="nav-item">
+          <%= link_to "All Materials", quizzes_path, class:"nav-link nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "All Courses", courses_path, class:"nav-link nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "All Users", users_path, class:"nav-link nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "All Quizzes", quizzes_path, class:"nav-link nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "All Categories", categories_path, class:"nav-link nav-link" %>
+        </li>
+
+      </ul>
+      </div>
+      </nav>
+  <div class="container">
     <%= yield %>
+  </div>
   </body>
 </html>
