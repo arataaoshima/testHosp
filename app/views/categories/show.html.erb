@@ -6,11 +6,11 @@
 </p>
 
 <p>
-  <strong>Courses:</strong>
+  <strong>Available Courses:</strong></br>
   <% @category.courses.each do |course| %>
-    <%= link_to course.name, course_path(course) %> </br>
+    <%= link_to course.name, course_path(course), class:"btn btn-outline-primary" %> </br>
   <% end %>
 </p>
 
-<%= link_to 'Edit', edit_category_path(@category) %> |
-<%= link_to 'Back', categories_path %>
+<%= link_to 'Edit', edit_category_path(@category), class:"btn btn-outline-secondary" %> |
+<%= link_to 'See All Categories', categories_path, class:"btn btn-outline-secondary" %>

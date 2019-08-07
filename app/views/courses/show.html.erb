@@ -1,24 +1,23 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
+<h1>
   <%= @course.name %>
-</p>
+</h1>
 <p>
   <strong>Category:</strong>
-  <%= @course.category.category_name %>
+  <%= link_to @course.category.category_name, category_path(@course.category), class:"btn btn-outline-secondary" %>
 </p>
 
 <p>
-  <strong>Company:</strong>
+  <strong>Provided by:</strong>
   <%= @course.company %>
 </p>
 <p>
-  <strong>Materials: </strong></br>
+  <strong>Course Materials: </strong></br>
   <% @course.materials.each do |material| %>
-  <%= link_to material.name, material_path(material) %></br>
+  <%= link_to material.name, material_path(material), class:"btn btn-outline-primary" %></br>
   <% end %>
 </p>
 
-<%= link_to 'Edit', edit_course_path(@course) %> |
-<%= link_to 'Back', courses_path %>
+<%= link_to 'Edit', edit_course_path(@course), class:"btn btn-outline-secondary" %> |
+<%= link_to 'See All Courses', courses_path, class:"btn btn-outline-secondary" %>

@@ -13,22 +13,22 @@
 
   <div class="field">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class:"form-control" %>
   </div>
 
   <div class="field">
     <%= f.label :course_id %>
-    <%= f.number_field :course_id %>
+    <%= f.select :course_id, Course.all.map{|c| [c.name, c.id]}, class:"form-control" %>
   </div>
 
   <div class="field">
     <%= f.label :quiz_type %>
-    <%= f.text_field :quiz_type %>
+    <%= f.text_field :quiz_type, class:"form-control" %>
   </div>
 
   <div class="field">
     <%= f.label :link %>
-    <%= f.text_area :link %>
+    <%= f.text_area :link, class:"form-control" %>
   </div>
 
   <div class="field">
@@ -37,7 +37,7 @@
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :class=>"btn btn-outline-secondary" %>
   </div>
 
 <% end %>

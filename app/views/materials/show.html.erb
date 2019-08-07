@@ -1,29 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @material.name %>
-</p>
+<h3>
+  Material Name: <strong><%= @material.name %></strong>
+
+</h3>
 
 <p>
   <strong>Course:</strong>
-  <%= @material.course_id %>
+  <%= link_to @material.course.name, course_path(@material.course) %>
 </p>
 
 <p>
-  <strong>Course:</strong>
+  <strong>Material Type:</strong>
   <%= @material.quiz_type %>
 </p>
 
 <% if @material.quiz_type == "multiple" %>
  <p>Please click the following link to do quizzes </p>
-  <strong><%= link_to "Start", quizzes_path %></strong>
+  <strong><%= link_to "Start", "/quizzes/exam_gate/#{@material.id}/1", class:"btn btn-outline-secondary" %></strong>
 <% end %>
 
 
 <% if @material.quiz_type == "video" %>
   <p>
-    <strong>Link:</strong>
+
     <iframe width="560" height="315" src="<%= @material.link %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </p>
 <% end %>

@@ -2,7 +2,7 @@
 
 <h1>Quizzes</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>ID</th>
@@ -24,9 +24,9 @@
         <td><%= quiz.answer %></td>
         <td><%= quiz.material_id %></td>
         <td><%= quiz.suborder %></td>
-        <td><%= link_to 'Show', quiz %></td>
-        <td><%= link_to 'Edit', edit_quiz_path(quiz) %></td>
-        <td><%= link_to 'Destroy', quiz, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', quiz, class:"btn btn-outline-secondary" %></td>
+        <td><%= link_to 'Edit', edit_quiz_path(quiz), class:"btn btn-outline-secondary" %></td>
+        <td><%= link_to 'Destroy', quiz, method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-outline-secondary" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Quiz', new_quiz_path %>
+<%= link_to 'New Quiz', new_quiz_path, class:"btn btn-outline-secondary" %>
